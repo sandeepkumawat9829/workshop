@@ -1,0 +1,8 @@
+<h2>All User Tasks</h2>
+<mat-card *ngFor="let task of allTasks">
+  <mat-card-header>
+    <mat-card-title>{{ task.title }}</mat-card-title>
+    <mat-card-subtitle>{{ task.description }}</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+

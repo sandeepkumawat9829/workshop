@@ -1,0 +1,44 @@
+/* src/app/modules/adin/admin-dashboard/admin-dashboard.component.css */
+.admin-dashboard {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .admin-dashboard h2 {
+    margin-top: 0;
+  }
+  
+  .user-section {
+    margin-bottom: 30px;
+  }
+  
+  .user-section h3 {
+    margin-bottom: 10px;
+    color: #34495e;
+  }
+  
+  .user-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .user-section ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  .user-section ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .completed {
+    color: #27ae60;
+    font-weight: bold;
+  }
+  
+  .pending {
+    color: #c0392b;
+    font-weight: bold;
+  }
+  

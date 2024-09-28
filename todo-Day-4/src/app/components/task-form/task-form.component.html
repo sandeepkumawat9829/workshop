@@ -1,0 +1,50 @@
+<!-- <div class="task-form">
+    <h3>Add a New Task</h3>
+    <form (ngSubmit)="onSubmit()" #taskForm="ngForm">
+        <div>
+            <label for="title">Task Title</label>
+            <input
+            type="text"
+            id="title"
+            name="title"
+            [(ngModel)]="task.title"
+            required
+            />
+
+        </div>
+        <div>
+            <label for="status">Task Status</label>
+            <select id="status" name="status" [(ngModel)]="task.completed">
+              <option [value]="true">Completed</option>
+              <option [value]="false">Pending</option>
+            </select>
+          </div>
+          <button type="submit" [disabled]="!taskForm.form.valid">Add Task</button>
+    </form>
+</div> -->
+
+<!-- src/app/components/task-form/task-form.component.html -->
+<div class="task-form">
+    <h2>Add New Task</h2>
+    <form (ngSubmit)="onSubmit()" #taskForm="ngForm">
+      <div>
+        <label for="title">Task Title</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          [(ngModel)]="task.title"
+          required
+        />
+      </div>
+      <div>
+        <label for="completed">Status</label>
+        <select id="completed" name="completed" [(ngModel)]="task.completed" required>
+          <option [value]="false">Pending</option>
+          <option [value]="true">Completed</option>
+        </select>
+      </div>
+      <button type="submit" [disabled]="!taskForm.form.valid">Add Task</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,28 @@
+<!-- <div class="admin-dashboard">
+    <h2>Admin Dashboard</h2>
+    <div *ngFor="let user of users">
+      <h3>{{user.name}}</h3>
+      <ul>
+        <li *ngFor="let task of user.tasks">
+          {{task.title}}-{{ task.completed?'Completed':'Pending'}}
+        </li>
+      </ul>
+    </div>
+  </div>
+   -->
+
+   <!-- src/app/modules/adin/admin-dashboard/admin-dashboard.component.html -->
+<div class="admin-dashboard">
+    <h2>Admin Dashboard</h2>
+    <div *ngFor="let user of users" class="user-section">
+      <h3>{{ user.name }}</h3>
+      <ul>
+        <li *ngFor="let task of user.tasks">
+          {{ task.title }} - <span [ngClass]="{ completed: task.completed, pending: !task.completed }">
+            {{ task.completed ? 'Completed' : 'Pending' }}
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

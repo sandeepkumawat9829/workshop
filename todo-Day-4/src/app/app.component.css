@@ -1,0 +1,14 @@
+/* src/app/app.component.css */
+.container {
+    display: flex;
+  }
+  
+  .main-content {
+    margin-left: 250px; /* Width of the sidebar */
+    margin-top: 60px;   /* Height of the navbar */
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: calc(100vh - 60px);
+    background-color: #ecf0f1;
+  }
+  

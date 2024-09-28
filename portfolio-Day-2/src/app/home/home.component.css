@@ -1,0 +1,22 @@
+.main-content {
+    margin-left: 250px;
+    height: 100vh;
+    background: url('hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+  }
+  .text-left {
+    position: absolute;
+    top: 20px;  
+    left: 20px; 
+    color: white; 
+  }
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 24px;
+  }
+  

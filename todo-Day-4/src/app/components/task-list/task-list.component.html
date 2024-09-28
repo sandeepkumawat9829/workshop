@@ -1,0 +1,21 @@
+<div *ngFor="let task of tasks">
+    {{task}}---
+    <h4>{{task.title}}</h4>
+    <p>Status: {{ task.completed ? 'Completed' : 'Pending' }}</p>
+  </div>
+  
+  <!-- Form to add a new task -->
+  <form (ngSubmit)="onSubmit()" #taskForm="ngForm">
+    <div>
+      <label for="title">Task Title:</label>
+      <input type="text" id="title" name="title" [(ngModel)]="task.title" required>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" name="completed" [(ngModel)]="task.completed">
+        Completed
+      </label>
+    </div>
+    <button type="submit" [disabled]="!taskForm.form.valid">Add Task</button>
+  </form>
+  

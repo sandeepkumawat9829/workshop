@@ -1,0 +1,46 @@
+/* src/app/components/task-form/task-form.component.css */
+.task-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .task-form h2 {
+    margin-top: 0;
+  }
+  
+  .task-form div {
+    margin-bottom: 15px;
+  }
+  
+  .task-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .task-form input,
+  .task-form select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #2ecc71;
+  }
+  
