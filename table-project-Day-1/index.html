@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Table Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            border-spacing: 0;
+        }
+        td {
+            vertical-align: top;
+        }
+        .header-logo img {
+            height: 50px;
+        }
+        .profile img {
+            width: 40px;
+            height: 40px;
+        }
+        .sidebar {
+            width: 20%;
+            padding: 10px;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .search-box {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .search-box input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .email-list {
+            border: 1px solid #ddd;
+            padding: 10px;
+            height: 70vh;
+            overflow-y: auto;
+        }
+        .email {
+            display: flex;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+        }
+        .email img {
+            width: 20px;
+            margin-right: 10px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: gray;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+
+<table>
+  
+    <tr>
+        <td class="header-logo">
+            <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r2.png" alt="Gmail Logo">
+        </td>
+        <td colspan="2" style="text-align: right;">
+            <div class="profile">
+                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Profile Icon">
+            </div>
+        </td>
+    </tr>
+    
+
+    <tr>
+        <td colspan="3" style="text-align: center;">
+            <h2>Gmail</h2>
+            <div class="search-box">
+                <input type="text" id="searchInput" onkeyup="searchEmails()" placeholder="Search mail...">
+            </div>
+        </td>
+    </tr>
+
+    
+    <tr>
+        
+        <td class="sidebar">
+            <ul>
+                <li>Compose Mail</li>
+                <li><a href="#">Inbox</a></li>
+                <li>Starred</li>
+                <li>Sent Mail</li>
+                <li>Drafts (59)</li>
+                <li>All Mail</li>
+                <li>Spam (133)</li>
+                <li>Trash</li>
+                <li>Contacts</li>
+            </ul>
+        </td>
+
+        
+        <td colspan="2">
+            <div class="email-list" id="emailList">
+                <div class="email">
+                    <img src="#" alt="Mail">
+                    <span>You have an invitation - Hi Rahul, 2:20 pm</span>
+                </div>
+                <div class="email">
+                    <img src="#" alt="Mail">
+                    <span>Facebook friending Pooja Mittal recently sent you a friend request 2:16 pm</span>
+                </div>
+                <div class="email">
+                    <img src="#" alt="Mail">
+                    <span>You have an invitation - Hi Rahul, 2:20 pm</span>
+                </div>
+                <div class="email">
+                    <img src="#" alt="Mail">
+                    <span>Facebook friending Pooja Mittal recently sent you a friend request 2:16 pm</span>
+                </div>
+               
+            </div>
+        </td>
+    </tr>
+
+   
+    <tr>
+        <td colspan="3" class="footer">
+            .Terms .Privacy .Gmail Blog .Google Home
+        </td>
+    </tr>
+</table>
+
+<script>
+function searchEmails() {
+   
+    var input, filter, emailList, emails, span, i, txtValue;
+    input = document.getElementById('searchInput');
+    filter = input.value.toLowerCase();
+    emailList = document.getElementById("emailList");
+    emails = emailList.getElementsByClassName('email');
+
+   
+    for (i = 0; i < emails.length; i++) {
+        span = emails[i].getElementsByTagName("span")[0];
+        txtValue = span.textContent || span.innerText;
+        if (txtValue.toLowerCase().indexOf(filter) > -1) {
+            emails[i].style.display = "";
+        } else {
+            emails[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
